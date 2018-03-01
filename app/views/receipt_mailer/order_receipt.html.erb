@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+
+  <body>
+    <h1>Dear most valued customer, thank you for using Jungle.com <%= @order.email %></h1>
+    <h2>Your purchase list: </h2>
+    <div class="order-summary jumbotron">
+
+      <div class="panel panel-default items">
+
+        <table class="table table-bordered">
+
+          <thead>
+            <tr>
+              <th colspan="2">Product</th>
+              <th>Unit Price</th>
+              <th>Quantity</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @order.line_items.each do |item| %>
+              <tr>
+                <td>
+                  <%= item.product.name %>
+                  <%= image_tag item.product.image.thumb, alt: item.product.name %>
+                </td>
+                <td>
+                  <%= item.product.description %>
+                </td>
+                <td>
+                  $<%= item.item_price %>
+                </td>
+                <td>
+                  <%= item.quantity %>
+                </td>
+                <td>
+                  $<%= item.total_price %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
