@@ -82,6 +82,20 @@ main section.products-show {
       max-width: 100%;
     }
   }
+
+  .product-review {
+    border-radius: 20px;
+    background-color: rgb(196, 196, 196);
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .product-review h2 {
+    color: white;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
 }
 
 
