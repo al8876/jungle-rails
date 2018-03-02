@@ -4,7 +4,11 @@
     <h1>My Cart</h1>
   </header>
 
-  <div class="panel panel-default items">
+  <% if cart.empty? %>
+    <h2>Your cart is empty</h2>
+    <h3><%= link_to 'Back to shopping', :root %></h3>
+  <% else %>
+    <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
         <tr>
@@ -33,7 +37,7 @@
     </table>
   </div>
 
-  <div class="row">
+    <div class="row">
     <div class="col-xs-12">
       <%= form_tag orders_path do %>
         <script
@@ -49,5 +53,8 @@
       <% end %>
     </div>
   </div>
+  <% end %>
+
+
 
 </section>
