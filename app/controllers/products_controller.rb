@@ -6,6 +6,10 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find params[:id]
+    @review = @product.reviews.create
   end
+
+  #did not implement
+  #<dd><%= user_review.user.name %></dd>
 
 end
