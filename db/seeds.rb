@@ -41,10 +41,17 @@ puts "Re-creating Users ..."
 
 
 user_bob = User.create!({
-  name: "bob",
+  name: "Bob",
   email: "test@test.com",
   password: 'test', 
   password_confirmation: 'test'
+})
+
+user_fred = User.create!({
+  name: "Fred",
+  email: "fred@fred.com",
+  password: "test",
+  password_confirmation: "test"
 })
 
 ## PRODUCTS
@@ -159,6 +166,13 @@ Review.create!({
   user: user_bob,
   description: "I, bob, think this product is horrible. Do not buy!",
   rating: 3
+})
+
+Review.create!({
+  product: prod2,
+  user: user_fred,
+  description: "TEST",
+  rating: 1
 })
 
 puts "DONE!"
