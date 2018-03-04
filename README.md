@@ -2,6 +2,20 @@
 
 A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
 
+## Images
+
+### User login and Add Item
+
+!["Screenshot of homepage"](https://github.com/al8876/jungle-rails/blob/master/docs/login_and_add.gif?raw=true)
+
+Users can login to Jungle to access their account. Once logged in, users can add items to their account.
+
+### Homepage of Jungle
+
+!["Screenshot of homepage"](https://github.com/al8876/chatter/blob/master/docs/Screen%20Shot%202018-02-23%20at%2012.06.10%20AM.png?raw=true)
+
+User can input a new username and display message.
+
 
 ## Setup
 
