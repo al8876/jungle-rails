@@ -4,18 +4,31 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 
 ## Images
 
-### User login and Add Item
+### User login and adding items
 
 !["Screenshot of homepage"](https://github.com/al8876/jungle-rails/blob/master/docs/login_and_add.gif?raw=true)
 
 Users can login to Jungle to access their account. Once logged in, users can add items to their account.
 
-### Homepage of Jungle
+### Changing quntity and checkout
 
-!["Screenshot of homepage"](https://github.com/al8876/chatter/blob/master/docs/Screen%20Shot%202018-02-23%20at%2012.06.10%20AM.png?raw=true)
+!["Screenshot of checkout"](https://github.com/al8876/jungle-rails/blob/master/docs/change_quantity.gif?raw=true)
 
-User can input a new username and display message.
+Users can change quantity of their order and checkout using Stripe API.
 
+### Order confirmation
+
+!["Screenshot of order review"](https://github.com/al8876/jungle-rails/blob/master/docs/order_confirmation.gif?raw=true)
+
+Users are taken to an order confirmation after order is completed.
+
+### Product Review
+
+!["Screenshot of order review - not logged in"](https://github.com/al8876/jungle-rails/blob/master/docs/review_not_user.gif?raw=true)
+
+Users can leave reviews for purchased products with a rating out of 5.
+
+If users are not logged in, they are prompted to login first before submitting their review.
 
 ## Setup
 
