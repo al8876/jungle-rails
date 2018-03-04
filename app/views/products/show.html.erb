@@ -25,13 +25,19 @@
         <br>
 
 
-        <article class="product-review">
+        <article class="product-review form">
 
           <h2>Write a review</h2>
           <%= form_for ([@product, @review]) do |f| %>
             Description: <%= f.text_area :description %>
             rating: <%= f.select :rating, ['1','2','3','4','5'] %>
-            <%= f.submit "Submit" %>
+
+            <% if current_user %>
+              <%= f.submit "Submit", class: "btn btn-info" %>
+            <% else %>
+              <p>You need to be logged in first to write a review<p>
+              <%= link_to 'Login', login_url , class: "btn btn-primary" %>
+            <% end %>            
           <% end %>
 
         </article>
@@ -41,18 +47,29 @@
         <article class="product-review">
 
           <h2>User Reviews</h2>
-            <% @product.reviews.each do |user_review| %>
-              <div class="row">
-                <div class="col-sm-8">
-                  <dl class="dl-horizontal">
-                    <dt>Description:</dt>
-                    <dd><%= user_review.description %></dd>
-                    <dt>Rating:</dt>
-                    <dd><%= user_review.rating %></dd>
-                  </dl>
-                </div>
+          <% @product.reviews.reverse.each do |user_review| %>
+            <div class="row">
+              <div class="col-sm-8">
+
+                <dl class="dl-horizontal">
+
+                  <dt>Created at:</dt>
+                  <dd><%= user_review.created_at.strftime("%m/%d/%Y") %></dd>
+                  <dt>User:</dt>
+                  <dd><%= user_review.user.name %></dd>
+                  <dt>Description:</dt>
+                  <dd><%= user_review.description %></dd>
+                  <dt>Rating:</dt>
+                  <dd><%= user_review.rating %>/5</dd>
+                  <% if current_user && current_user.id == user_review.user_id %>
+                    <%= link_to fa_icon("trash"), [@product, @review], class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this?" } %>
+                  <% end %>
+
+                </dl>
+
               </div>
-            <% end %>
+            </div>
+          <% end %>
 
         </article>
 

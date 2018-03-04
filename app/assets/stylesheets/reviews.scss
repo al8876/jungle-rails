@@ -1,0 +1,21 @@
+.product-review {
+  border-radius: 20px;
+  background-color: rgb(196, 196, 196);
+  margin-left: 50px;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.product-review h2 {
+  color: white;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.proudct_review button {
+  margin-left: 10px;
+}
+
+
+
+// <%= link_to "Delete", product_review_path(:product_id => @product.id, :id => review.id) , method: :delete, data: {confirm: "Are you sure you want to remove your review?"} %>

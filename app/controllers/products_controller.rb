@@ -5,8 +5,8 @@ class ProductsController < ApplicationController
   end
 
   def show
-    @product = Product.find params[:id]
-    @review = @product.reviews.create
+    @product = Product.find(params[:id])
+    @review = Review.create
   end
 
   #did not implement
