@@ -24,11 +24,13 @@ Users are taken to an order confirmation after order is completed.
 
 ### Product Review
 
-!["Screenshot of order review - not logged in"](https://github.com/al8876/jungle-rails/blob/master/docs/review_not_user.gif?raw=true)
+!["Screenshot of order review - not logged in"](https://github.com/al8876/jungle-rails/blob/master/docs/reviews.gif?raw=true)
 
 Users can leave reviews for purchased products with a rating out of 5.
 
 If users are not logged in, they are prompted to login first before submitting their review.
+
+!["Screenshot of order review - not logged in"](https://github.com/al8876/jungle-rails/blob/master/docs/review_not_user.gif?raw=true)
 
 ## Setup
 
