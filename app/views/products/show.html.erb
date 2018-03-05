@@ -62,7 +62,7 @@
                   <dt>Rating:</dt>
                   <dd><%= user_review.rating %>/5</dd>
                   <% if current_user && current_user.id == user_review.user_id %>
-                    <%= link_to fa_icon("trash"), [@product, @review], class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this?" } %>
+                    <%= link_to fa_icon("trash"), product_review_url(@product, @reviews), class: "btn btn-sm btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete this?" } %>
                   <% end %>
 
                 </dl>
