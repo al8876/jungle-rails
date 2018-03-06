@@ -2,7 +2,7 @@ require 'rails_helper'
 
 # describe Product do
 #   it { is_expected.to validate_presence_of(:name) }
-#   it { is_expected.to validate_presence_of(:price) }
+#   it { is_expected.to validate_presence_of(:price_cents) }
 #   it { is_expected.to validate_presence_of(:quantity) }
 #   it { is_expected.to validate_presence_of(:category_id) }
 # end
