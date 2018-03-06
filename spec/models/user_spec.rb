@@ -35,12 +35,23 @@ RSpec.describe User, type: :model do
   end
 
   describe '.authenticate_with_credentials' do
+
     it 'Return false if the password does not match the account email through authentication' do
       expect(User.authenticate_with_credentials('fred@fred.com', 'testtest')).to eq nil
     end
+
     it 'Return true if password matches the account email through authentication' do
       expect(User.authenticate_with_credentials('fred@fred.com', 'lighthouse')).to eq @fred
     end
+
+    it 'Returns true if the email parameter contains spaces before or after' do
+      expect(User.authenticate_with_credentials(' fred@fred.com', 'lighthouse')).to eq @fred
+    end
+
+    it 'Returns true if the email contains uppercase letters as input' do
+      expect(User.authenticate_with_credentials('FRED@fred.COM', 'lighthouse')).to eq @fred
+    end
+    
   end
 
 end
